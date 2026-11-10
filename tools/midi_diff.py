@@ -8,7 +8,7 @@ stdlib `wave` module), so no recorded audio is involved. The tone file is the
 sine.wav AmazingMIDI ships with. Each program is driven the same way, through
 window messages: the three file boxes are filled in, Transcribe... is sent,
 and Start is pressed in its dialog. The two .mid files must be byte-identical.
-Exit 0 if they are.
+Exit 0 if they are, or with a 'skipped' line when there is no game\amazingmidi.exe.
 """
 import argparse
 import ctypes
@@ -136,6 +136,10 @@ def main():
     ap.add_argument('--keep', help='folder to keep the .wav and both .mid in')
     a = ap.parse_args()
     game = os.path.abspath(a.game)
+    # No copy of AmazingMIDI here (a netlab test VM): SKIP, not PASS (REPO_RULES 10).
+    if not os.path.exists(os.path.join(game, 'amazingmidi.exe')):
+        print('midi_diff: skipped (no %s)' % os.path.join(game, 'amazingmidi.exe'))
+        return 0
     work = os.path.abspath(a.keep) if a.keep else tempfile.mkdtemp(prefix='amidi_')
     os.makedirs(work, exist_ok=True)
     wav = os.path.join(work, 'scale.wav')

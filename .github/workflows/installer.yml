@@ -1,0 +1,18 @@
+# The installer for this commit (recomp-launcher with launcher/launcher.json).
+# Private repo: run by hand only (REPO_RULES section 8), and on a v* tag.
+name: installer
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  installer:
+    uses: sp00nznet/recomp-launcher/.github/workflows/installer.yml@main
+    with:
+      name: AmazingMIDI-Recomp-Installer
+      platforms: windows

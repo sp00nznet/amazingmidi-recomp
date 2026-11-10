@@ -1,0 +1,17 @@
+{
+  "title": "AmazingMIDI",
+  "repo": "sp00nznet/amazingmidi-recomp",
+  "accent": "#3a7d44",
+  "note": {
+    "windows": "The build takes about 3 minutes and 300 MB. Python and the Visual Studio Build Tools are installed if they are missing; the Build Tools are about 3 GB and add 15 to 30 minutes, and Windows asks for permission once. Point it at your installed AmazingMIDI 1.70 folder."
+  },
+  "game": {
+    "name": "AmazingMIDI 1.70",
+    "files": ["amazingmidi.exe|AmazingMIDI/amazingmidi.exe"]
+  },
+  "sources": [{ "repo": "sp00nznet/pcrecomp", "ref": "main", "dir": "pcrecomp" }],
+  "setup": {
+    "windows": ["cmd", "/c", "Setup.cmd", "-Yes", "-GameDir", "{game}"]
+  },
+  "play": "AmazingMIDI.lnk"
+}
