@@ -1,0 +1,8 @@
+AmazingMIDI recomp
+
+The host is derived from the MechWarrior 3 recomp's host and runs on
+pcrecomp's native32 runtime (https://github.com/sp00nznet/pcrecomp); the lift
+driver is the Bully recomp's. All MIT.
+
+AmazingMIDI is (c) 1998-2003 arakisoftware (freeware since 1.70). No part of
+it is included: no executable, help file, tone file or generated source.
