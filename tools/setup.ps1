@@ -1,4 +1,4 @@
-﻿# One-click setup for the AmazingMIDI 1.70 static recompilation. Run it by
+# One-click setup for the AmazingMIDI 1.70 static recompilation. Run it by
 # double-clicking Setup.cmd in the repo folder; the README's "Step by step" is
 # the same thing by hand, command for command.
 #
@@ -176,7 +176,7 @@ else { Run "Lifting" ($pyargs + @('run_lift.py')) }
 Step 5 "Building build\amazingmidirecomp.exe (a minute or two)"
 if ((Test-Path 'build\amazingmidirecomp.exe') -and -not $Force) { Say "  Already built (skipping)." }
 else {
-  $env:CMAKE_ARGS = "-DPCRECOMP=$($Toolkit -replace '\', '/')"
+  $env:CMAKE_ARGS = "-DPCRECOMP=$($Toolkit -replace '\\', '/')"
   Run "Compiling" @('cmd', '/d', '/c', "`"$Root\build.cmd`"")
 }
 
