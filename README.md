@@ -2,8 +2,9 @@
 
 Static recompilation of **AmazingMIDI** 1.70 (arakisoftware, 2003), the
 WAV-to-MIDI transcriber, from its shipping Win32 executable to native C. No
-emulator, no wrapper DLLs. It is the first application (not a game) on
-pcrecomp.
+emulator, no wrapper DLLs. It is the first pcrecomp project that ran with no
+changes at all: no toolkit fixes and no fixes to the program, just lift and
+build (plus one seeded function address, below).
 
 Built on the [pcrecomp](https://github.com/sp00nznet/pcrecomp) toolchain and
 following its shared house style (layout, CLI, conformance harness), like the
