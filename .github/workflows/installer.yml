@@ -1,10 +1,8 @@
 # The installer for this commit (recomp-launcher with launcher/launcher.json).
-# Private repo: run by hand only (REPO_RULES section 8), and on a v* tag.
+# Private repo: run by hand only (REPO_RULES section 8).
 name: installer
 
 on:
-  push:
-    tags: ["v*"]
   workflow_dispatch:
 
 permissions:
