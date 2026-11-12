@@ -7,6 +7,8 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- `CONTRIBUTING.md`, `CONTRIBUTORS.md`, `docs/building.md`, `docs/testing.md`,
+  and a `setup.sh` that says the build is Windows-only for now.
 - `Setup.cmd` (`tools/setup.ps1`): one-click setup from your installed copy;
   checks and offers to install the prerequisites, resumes after a failure,
   ends with an `AmazingMIDI` shortcut.
@@ -17,6 +19,8 @@ All notable changes to this project are documented here. The format follows
   `tools/midi_diff.py` as its QA.
 
 ### Changed
+- README in the ra2 layout; the step-by-step build and the harness moved to
+  `docs/`. `NOTICE` is now `NOTICE.md` and says what MIT does and doesn't cover.
 - `tools/midi_diff.py` prints `midi_diff: skipped` and exits 0 when there is
   no `gamemazingmidi.exe`, so a machine without the program reports SKIP.
 - README rewritten in the pcrecomp house style, with the real catalog and lift
