@@ -7,6 +7,7 @@
   },
   "game": {
     "name": "AmazingMIDI 1.70",
+    "get": "https://archive.org/details/tucows_327319_AmazingMIDI",
     "files": ["amazingmidi.exe|AmazingMIDI/amazingmidi.exe"]
   },
   "sources": [{ "repo": "sp00nznet/pcrecomp", "ref": "main", "dir": "pcrecomp" }],
